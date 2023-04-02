@@ -56,7 +56,7 @@ echo hello | timeout 1 nc localhost 5001
 
 There are several parts of the application:
 
-- Config - Reads in a JSON config file at a specified location (default to `./config.json`) and parses into a `ProxyConfig` struct
+- Config - Reads in a YAML config file at a specified location (default to `./config.yaml`) and parses into a `ProxyConfig` struct
 - Proxy - Contains a lightweight factory to create a proxy object based on the config struct and implementation for functions that enable the proxy to listen on a given port and to proxy connections (more details to follow)
 - Main - Parses cli args, reads config, spins up proxies, captures ctrl-c input to close listeners
 
